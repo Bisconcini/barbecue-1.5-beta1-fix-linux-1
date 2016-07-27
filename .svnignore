@@ -1,0 +1,15 @@
+target
+build
+dist
+Barbecue.iml
+Barbecue.ipr
+Barbecue.iws
+.externalToolBuilders
+bin
+*.svg
+*.png
+*.gif
+*.jpg
+*.log
+*.eps
+

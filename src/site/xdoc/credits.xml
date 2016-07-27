@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- $Header: /cvsroot/barbecue/barbecue/src/site/xdoc/credits.xml,v 1.5 2006/09/25 05:06:56 sullis Exp $ -->
+<document>
+  <properties>
+     <title>Credits</title>
+  </properties>
+  <body>
+  <section name="Credits">
+    <p>
+    <ul>
+    <li>Ian Bourke</li>
+    <li>James Jenner</li>
+    <li>Tim Molteno</li>
+    <li>Werner Keil</li>
+    <li>Alex Ferrer</li>
+    <li>Brendon Anderson</li>
+    <li>Ryan Martell</li>
+    <li>Sean C. Sullivan</li>
+    <li>Alberto Romei</li>
+    </ul>
+    </p>
+  
+   </section>
+  </body>
+</document>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs title="Frequently Asked Questions">
+
+<part id="general">
+  <title>General</title>
+  
+  <faq id="license">
+  	<question>What license does the Barbecue project use?</question>
+  	<answer>Barbecue has a BSD-style license. See <a href="http://barbecue.svn.sourceforge.net/viewvc/barbecue/trunk/barbecue/LICENSE.txt?view=markup">LICENSE.txt</a></answer>
+  </faq>
+  
+  <faq id="symbologies">
+    <question>What symbologies are supported?</question>
+    <answer>
+      <p>Code128, Code128A, Code128B, Code128C, UCC128, EAN128, EAN13, Bookland, UPC-A, Standard 2 of 5, 
+         Interleave 2 of 5, PDF417, Code 39, Codabar, PostNet
+      </p>
+    </answer>
+  </faq>
+
+  <faq id="what-jre">
+    <question>What JRE's are supported?</question>
+    <answer>
+      <p>Barbecue 1.0.x requires JRE 1.3 or higher. Barbecue 1.5.x requires JRE 1.4 or higher.
+      </p>
+    </answer>
+  </faq>
+
+  <faq id="output-formats">
+    <question>What output formats are supported?</question>
+    <answer>
+      <p>PNG, JPEG, GIF, SVG, and EPS</p>
+    </answer>
+  </faq>
+
+  <faq id="printing">
+    <question>How can I print a barcode?</question>
+    <answer>
+      <p>See <a href="http://barbecue.svn.sourceforge.net/viewvc/barbecue/trunk/barbecue/src/zip/examples/PrintingExample.java?view=markup">PrintingExample.java</a>
+      </p>
+    </answer>
+  </faq>
+
+</part>
+
+
+</faqs>

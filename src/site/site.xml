@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Header: /cvsroot/barbecue/barbecue/src/site/site.xml,v 1.5 2006/09/22 03:40:30 sullis Exp $ -->
+<project name="barbecue">
+  <body>
+    <links>
+      <item name="barbecue" href="http://www.sourceforge.net/projects/barbecue/" />
+    </links>
+
+    <menu name="barbecue">
+      <item name="Home" href="/index.html"/>
+      <item name="Download" href="http://prdownloads.sourceforge.net/barbecue/barbecue-1.5-alpha3.zip?download" />
+      <item name="FAQ" href="/faq.html"/>
+      <item name="License" href="http://barbecue.svn.sourceforge.net/viewvc/barbecue/trunk/barbecue/LICENSE.txt?view=markup" />
+      <item name="Donate" href="http://sourceforge.net/donate/index.php?group_id=78049" />
+      <item name="View source" href="xref/index.html"/>
+      <item name="Javadocs" href="apidocs/index.html"/>
+      <item name="Screenshots" href="screenshots.html"/>
+      <item name="Tools and libraries" href="/tools.html"/>
+      <item name="Related" href="/related.html"/>
+      <item name="Credits" href="/credits.html"/>
+      <item name="SourceForge" href="http://sourceforge.net/projects/barbecue/"/>
+    </menu>
+
+    ${reports}
+
+  </body>
+</project>

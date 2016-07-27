@@ -1,0 +1,77 @@
+
+Servlet class: net.sourceforge.barbecue.BarcodeServlet
+
+Required parameters:
+--------------------
+
+data 				the data to encode
+
+
+Optional parameters:
+--------------------
+
+type				the barcode type - see below
+width				the width of the smallest bar in the barcode in pixels
+height				the height of the barcode in pixels
+resolution			the output resolution in DPI
+checksum			true to include a calculated checksum, false to omit (only used by Code39 and derivatives)
+headless			true for headless mode (default value), false to force non-headless mode
+drawText			(only takes effect if headless = false) true to draw text of barcode, false to omit
+
+
+Types:
+------
+
+Valid barcode types are (case insensitive):
+
+Code128
+Code128A
+Code128B
+Code128C
+EAN128
+USPS
+ShipmentIdentificationNumber
+SSCC18
+SCCC14ShippingCode
+GlobalTradeItemNumber
+UCC128						Note: UCC128 requires an additional parameter: appid
+PDF417
+Code39
+3of9
+USD3
+Codabar
+Std2of5
+Int2of5
+USD4
+NW7
+Monarch
+2of7
+PostNet
+UPCA
+RandomWeightUPCA
+
+Note that if the type is omitted then the type will default to Code128 (optimal).
+
+
+
+Examples:
+---------
+
+BarcodeServlet?data=12345
+BarcodeServlet?data=12345&width=3&height=100&resolution=100
+BarcodeServlet?data=12345&drawText=yes
+BarcodeServlet?data=12345&type=Code128B
+BarcodeServlet?data=12345&type=UCC128&appid=402
+BarcodeServlet?data=12345&type=PDF417
+BarcodeServlet?data=12345&headless=false&drawText=true
+
+
+
+Servlet Container Configuration:
+--------------------------------
+
+When running the servlet in headless mode (the default) you must also set the Java VM
+running the servlet to use headless mode, by setting the following VM parameter:
+
+-Djava.awt.headless=true
+

@@ -1,0 +1,8 @@
+Add support for:
+
+- EAN-8, JAN-13, UPC-A, UPC-E, ISBN
+
+Code changes:
+
+Make PDF barcode extend new TwoDimensionalBarcode class
+

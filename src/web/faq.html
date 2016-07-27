@@ -1,0 +1,660 @@
+    <html>
+      <head>
+
+
+          <title>
+            Barbecue -
+          FAQ
+
+          </title>
+
+
+
+        <style type="text/css">
+          @import url("./stylesheets/bbq.css");
+        </style>
+
+
+
+
+
+        <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+
+
+
+
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+
+              <td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <a href="http://barbecue.sourceforge.net/">
+                    <img border="0" alt="International Barcode Consortium" src="./images/ibc.jpg" align="left"></img>
+                  </a>
+
+              </td>
+
+
+              <td>
+                <div id="login" align="right">
+
+
+
+
+
+
+
+
+                    <a href="http://barbecue.sourceforge.net/">
+                      <img border="0" alt="Barbecue" src="./images/barbecue.jpg" align="right"></img>
+                    </a>
+
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+
+              <td>
+                <div align="right">
+
+
+
+
+
+
+
+
+
+      <a href="index.html">Home</a>
+
+
+      |
+
+
+      <a href="http://sourceforge.net/projects/barbecue">SourceForge</a>
+
+
+      |
+
+
+      <a href="http://www.barbecuen.com/">Hmmm, tasty!</a>
+
+
+
+
+
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <table border="0" width="100%" cellpadding="8" cellspacing="0">
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+
+                  <div>
+                    <small>Last published: @TIMESTAMP@</small>
+                  </div>
+
+
+
+
+    <div>
+      <strong>Getting Started</strong>
+
+
+
+
+
+
+    <div>
+      <small>
+
+
+      		<a href="http://sourceforge.net/project/showfiles.php?group_id=78049">Downloads</a>
+
+      </small>
+
+
+
+    </div>
+
+
+
+    </div>
+
+    <div>
+      <strong>Documentation and Help</strong>
+
+
+
+
+
+
+    <div>
+      <small>
+
+
+      		<a href="faq.html">FAQ</a>
+
+      </small>
+
+
+
+    </div>
+
+
+
+
+
+
+    <div>
+      <small>
+
+
+      		<a href="apidocs/index.html">Javadocs</a>
+
+      </small>
+
+
+
+    </div>
+
+
+
+
+
+
+    <div>
+      <small>
+
+
+      		<a href="mail-lists.html">Mailing Lists</a>
+
+      </small>
+
+
+
+    </div>
+
+    </div>
+
+    <div>
+      <strong>Developers</strong>
+
+
+
+
+
+
+    <div>
+      <small>
+
+
+      		<a href="roadmap.html">Roadmap</a>
+
+      </small>
+
+
+
+    </div>
+
+
+
+
+
+
+    <div>
+      <small>
+
+
+      		<a href="cvs.html">CVS</a>
+
+      </small>
+
+
+
+    </div>
+
+    </div>
+
+<div>
+      <strong>Usages</strong>
+
+    <div>
+      <small>
+      		<a href="http://compiere-mfgscm.sourceforge.net/">Compiere MFG & SCM</a>
+      </small>
+    </div>
+
+    </div>
+
+
+    <div>
+      <strong>Search Barbecue</strong>
+      <form action="http://www.google.com/search" method="get">
+        <a href="http://www.google.com" class="navlink">
+          <img border="0" alt="Google" src="http://www.google.com/logos/Logo_25wht.gif"></img>
+        </a>
+        <input name="q" maxlength="255" size="15" type="text" value=""></input>
+        <input name="btnG" type="submit" value="Go"></input>
+        <input name="domains" type="hidden" value="http://barbecue.sourceforge.net"></input>
+        <input name="sitesearch" type="hidden" value="http://barbecue.sourceforge.net" id="search"></input>
+      </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+
+                <div class="app">
+
+
+    <div class="h3">
+
+
+        <h3>
+          <a name="Frequently Asked Questions">Frequently Asked Questions</a>
+        </h3>
+
+
+    <p>
+
+    <strong>
+      Drawing
+    </strong>
+
+    </p>
+
+    <ol>
+
+    <li>
+
+    <a href="#paint-paintcomponent">
+        Why don't my calls to paint() and paintComponent() work properly?
+      </a>
+
+    </li>
+
+    <li>
+
+    <a href="#casting-graphics">
+        I have a Graphics object, but barbecue requires a Graphics2D. How do I get one?
+      </a>
+
+    </li>
+
+    <li>
+
+    <a href="#printing-cannot-cast">
+        I'm trying to print a barcode using a PrintJob from the default Toolkit, but I cannot
+        cast the returned WPrintGraphicsWrapper to a Graphics2D. What should I do instead?
+      </a>
+
+    </li>
+
+    <li>
+
+    <a href="#x11">
+        When I try and generate a barcode on Solaris (or other unix variants inc. Linux) I get an InternalError about the X11 display not being available on 0:0. What is wrong?
+      </a>
+
+    </li>
+
+    <li>
+
+    <a href="#headless">
+        When I try and generate a barcode I get a HeadlessException/UnsupportedOperationException. What is going wrong?
+      </a>
+
+    </li>
+
+    </ol>
+
+    <p>
+
+    <strong>
+      Getting Help
+    </strong>
+
+    </p>
+
+    <ol>
+
+    <li>
+    <a href="#bugs-help-requests">
+        How do I get help? How can I get the fastest response?
+      </a>
+    </li>
+
+    <li>
+    <a href="#bug-rejected">
+        Why has my bug been rejected?
+      </a>
+    </li>
+    <li>
+    <a href="#help-ignored">
+        Why has my help request been ignored?
+      </a>
+    </li>
+    <li>
+    <a href="#support-sucks">
+        Why is there no support for Barbecue?
+      </a>
+    </li>
+    <li>
+    <a href="#new-feature">
+        I posted a help message asking for a new feature. Why hasn't it been implemented yet?
+      </a>
+    </li>
+
+    </ol>
+
+    </div>
+
+    <div class="h3">
+
+
+        <h3>
+          <a name="Drawing">Drawing</a>
+        </h3>
+
+
+    <dl>
+
+    <dt>
+
+    <a name="paint-paintcomponent">
+        Why don't my calls to paint() and paintComponent() work properly?
+      </a>
+
+    </dt>
+
+    <dd>
+
+
+    <p>
+      If you want to draw a barcode onto a Graphics2D canvas then you should use the
+	draw() method. The paintX() methods are used internally by Swing and should
+        not be called by your code (even though they are public).
+    </p>
+
+
+    </dd>
+
+    </dl>
+
+    <dl>
+
+    <dt>
+
+    <a name="casting-graphics">
+        I have a Graphics object, but barbecue requires a Graphics2D. How do I get one?
+      </a>
+
+    </dt>
+
+    <dd>
+
+
+    <p>
+      It is safe to cast from a Graphics object directly to a Graphics2D.
+    </p>
+
+
+    </dd>
+
+    </dl>
+
+    <dl>
+
+    <dt>
+
+    <a name="printing-cannot-cast">
+        I'm trying to print a barcode using a PrintJob from the default Toolkit, but I cannot
+        cast the returned WPrintGraphicsWrapper to a Graphics2D. What should I do instead?
+      </a>
+
+    </dt>
+
+    <dd>
+
+
+    <p>
+      You should use the PrinterJob class instead. This will return a castable Graphics object.
+    </p>
+
+
+    </dd>
+
+    </dl>
+
+    <dl>
+
+    <dt>
+
+    <a name="x11">
+        When I try and generate a barcode on Solaris (or other unix variants inc. Linux) I get an InternalError about the X11 display not being available on 0:0. What is wrong?
+      </a>
+
+    </dt>
+
+    <dd>
+
+
+    <p>
+      There is a known issue with the Java runtime where a display is assumed to be present when accessing the graphics environment. More information is available
+        at http://developer.java.sun.com/developer/bugParade/bugs/4281163.html, but the most common workaround is to run an X11 process purely to satisfy the needs of
+        the JVM, even if the machine is headless.
+    </p>
+
+
+    </dd>
+
+    </dl>
+
+    <dl>
+
+    <dt>
+
+    <a name="headless">
+        When I try and generate a barcode I get a HeadlessException/UnsupportedOperationException. What is going wrong?
+      </a>
+
+    </dt>
+
+    <dd>
+
+
+    <p>
+      The machine generating the barcode is in Headless mode. The barcode servlet should automatically assume this mode, but you can force barbecue to do this at any time by
+		calling
+    <code>
+      EnvironmentFactory.setHeadlessMode()
+    </code>
+    in your code. Alternatively, try explicitly setting the resolution
+ 		on the barcode.
+    </p>
+
+
+    </dd>
+
+    </dl>
+
+    </div>
+
+
+<div class="h3">
+
+
+        <h3>
+          <a name="Help">Getting Help</a>
+        </h3>
+
+
+    <dl>
+
+    <dt>
+
+    <a name="bugs-help-requests">
+        How do I get help? How can I get the fastest response?
+      </a>
+
+    </dt>
+
+    <dd>
+
+
+    <p>
+      If you want help with using Barbecue then post a question in
+				 the Help discussion forum on the SourceForge pages. Please
+				  look first to see if anyone else has already had the same
+				  problem and how it was fixed. <br/>
+				  If you think you have found a bug, then check to see if there
+				  is an existing bug in the bug tracker and see if it is already
+				  fixed in the latest version of barbecue. If you have a new bug
+				  then please add it to the bug tracker on the SourceForge pages.
+    </p>
+    <p>
+				  When adding bugs or asking for help, please, please, please include
+				  the following information:
+				  <ul>
+					  <li>The version of barbecue that you are using</li>
+					  <li>The data that you are trying to encode</li>
+					  <li>The barcode type that you are using</li>
+					  <li>Whether you are using barbcue via the servlet, as a Swing component or an SVG generator</li>
+					  <li>All other parameters that you are setting explicitly on the barcode or the servlet</li>
+					  <li>All details of any error messages or exceptions that you have</li>
+				  </ul>
+				  If you do not provide this information then your help request or bug
+				  will be probably be rejected.
+			  </p>
+
+
+    </dd>
+
+    </dl>
+
+    <dl>
+    <dt>
+    <a name="bug-rejected">
+        Why has my bug been rejected?
+      </a>
+    </dt>
+    <dd>
+    <p>
+     See the question above about getting help. The most likely
+				  explanation is that your bug report did not include enough
+				  information to diagnose/reproduce the bug.
+			  </p>
+    </dd>
+    </dl>
+
+    <dl>
+    <dt>
+    <a name="help-ignored">
+        Why has my help request been ignored?
+      </a>
+    </dt>
+    <dd>
+    <p>
+     See the question above about getting help. The most likely
+				  explanation is that your help request did not include enough
+				  information to diagnose/reproduce the problem that you are
+				  having.
+			  </p>
+    </dd>
+    </dl>
+
+    <dl>
+    <dt>
+    <a name="support-sucks">
+        Why is there no support for Barbecue?
+      </a>
+    </dt>
+    <dd>
+    <p>
+     It's an open source product. Limited support is provided from the user community
+				  and from the kindness of my heart. If you want professional technical support then I
+				  advise you to purchase one of the commercial alternatives to Barbecue. Or donate to the project.
+			  </p>
+    </dd>
+    </dl>
+
+    <dl>
+    <dt>
+    <a name="new-feature">
+        I posted a help message asking for a new feature. Why hasn't it been implemented yet?
+      </a>
+    </dt>
+    <dd>
+    <p>
+     New features are added according to the development roadmap published on the web site.
+				  If you would like a feature added then the fastest way to get it done is to write the code
+				  yourself and submit a patch. The only alternative is to wait for the Barbecue release that will
+				  contain the feature that you want. Note that the roadmap evolves over time and new features are
+				  prioritised based on demand. Also note that a "zero-defect" policy is in effect on Barbecue
+				  development - this means that new features are deliberately delayed in favour of bug fixes.
+			  </p>
+    </dd>
+    </dl>
+
+
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+
+            <tr>
+              <td>
+                      © 2002-@YEAR@, International Barcode Consortium
+
+              </td>
+
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>

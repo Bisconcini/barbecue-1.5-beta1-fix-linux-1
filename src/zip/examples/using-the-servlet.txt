@@ -1,0 +1,32 @@
+Installation:
+-------------
+
+Barbecue comes with a pre-compiled war file in the distribution that you can drop straight
+into a servlet compatible application server (e.g. Tomcat).
+
+The Barbecue servlet is configured to be available from the following URL by default:
+
+http://host:port/barbecue/
+
+Any requests with this prefix will be routed to the Barbecue servlet.
+
+
+
+Usage:
+------
+
+The recommended way to use Barbecue as a servlet is to reference it as the src for an
+img tag. For example:
+
+<img src="http://localhost:8080/barbecue/barcode?data=123545&height=50"/>
+
+
+
+Notes:
+------
+
+If you are running the servlet on a headless server (i.e. one with no monitor or graphics
+environment) then you must ensure that you use the servlet headless parameter, and also
+set the following JVM property:
+
+-Djava.awt.headless=true

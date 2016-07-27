@@ -1,0 +1,335 @@
+<project name="barbecue" default="all" basedir=".">
+    <!-- NOTE: This build script required Ant 1.6 or later -->
+    <!-- NOTE: By default, this project assumes upload to SourceForge.net for deployment -->
+
+
+    <!-- Project properties -->
+    <!-- Default defined here, project specific from project.properties -->
+    <!-- user specific from user.properties in home directory -->
+    <property file="${user.home}/user.properties"/>
+    <property file="project.properties"/>
+    <property name="project.version" value="Developer Build"/>
+    <property name="project.vendor" value="Set vendor in project.properties"/>
+    <property name="project.name" value="Set name in project.properties"/>
+    <property name="project.title" value="Set title in project.properties"/>
+    <property name="project.description" value="Set description in project.properties"/>
+    <property name="project.homedir" value="Set homedir in project.properties"/>
+    <property name="servlet.class" value="ClassNotFound"/>
+
+    <property name="project.homedir" value="notset"/>
+    <property name="web.server" value="${project.name}.sourceforge.net"/>
+    <property name="web.dir" value="${project.homedir}/htdocs"/>
+    <property name="user" value="anonymous"/>
+    <property name="password" value=""/>
+    <property name="ftp.user" value="anonymous"/>
+    <property name="ftp.password" value="anonymous"/>
+    <property name="ftp.server" value="upload.sourceforge.net"/>
+    <property name="ftp.dir" value="incoming"/>
+
+    <property name="license.file" value="LICENSE.txt"/>
+
+    <property name="binary.extensions" value="**/*.png, **/*.jpg, **/*.jpeg, **/*.gif"/>
+
+    <!-- Folders -->
+    <property name="lib" value="lib"/>
+    <property name="compile.lib" value="${lib}/compile"/>
+    <property name="runtime.lib" value="${lib}/runtime"/>
+
+    <property name="src" value="src"/>
+    <property name="java.src" value="${src}/java"/>
+    <property name="test.src" value="${src}/test"/>
+    <property name="zip.src" value="${src}/zip"/>
+    <property name="web.src" value="${src}/web"/>
+    <property name="web.xml" value="web.xml"/>
+    <property name="web.xml.location" value="${src}/WEB-INF/${web.xml}"/>
+
+    <property name="tools" value="tools"/>
+    <property name="build" value="build"/>
+    <property name="classes" value="${build}/classes"/>
+    <property name="test.classes" value="${build}/testclasses"/>
+    <property name="test.results" value="${build}/test-results"/>
+    <property name="javadocs" value="${build}/javadocs"/>
+    <property name="docs" value="docs"/>
+    <property name="web.content" value="${build}/web"/>
+    <property name="bin.dist" value="${build}/bindist"/>
+    <property name="src.dist" value="${build}/srcdist"/>
+
+    <property name="distfile.name" value="${project.name}-${project.version}"/>
+    <property name="src.distfile.name" value="${distfile.name}-src"/>
+
+    <property name="dist" value="dist"/>
+
+    <!-- Variable for tokenisation -->
+    <filterset id="project.vars">
+        <filter token="PROJECT.VERSION" value="${project.version}"/>
+        <filter token="PROJECT.NAME" value="${project.name}"/>
+        <filter token="PROJECT.TITLE" value="${project.title}"/>
+        <filter token="PROJECT.DESCRIPTION" value="${project.description}"/>
+        <filter token="PROJECT.VENDOR" value="${project.vendor}"/>
+        <filter token="SERVLET.CLASS" value="${servlet.class}"/>
+    </filterset>
+
+    <path id="compile.classpath">
+        <fileset dir="${compile.lib}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <fileset dir="${runtime.lib}">
+            <include name="**/*.jar"/>
+        </fileset>
+        <pathelement location="${classes}"/>
+    </path>
+
+    <path id="test.classpath">
+        <pathelement location="${test.classes}"/>
+        <path refid="compile.classpath"/>
+    </path>
+
+    <target name="init">
+        <tstamp>
+            <format property="BUILD.TIMESTAMP" pattern="yyyy-MM-dd HH:mm:ss" locale="en"/>
+            <format property="TODAY" pattern="d-MMMM-yyyy" locale="en"/>
+            <format property="YEAR" pattern="yyyy" locale="en"/>
+        </tstamp>
+        <buildnumber/>
+    </target>
+
+    <target name="clean" description="Deletes all artifacts from a previous build">
+        <delete dir="${build}"/>
+        <delete dir="${dist}"/>
+    </target>
+
+    <target name="compile" depends="init" description="Compiles the project source files">
+        <mkdir dir="${classes}"/>
+        <javac srcdir="${java.src}" destdir="${classes}" source="1.3" target="1.3">
+            <classpath refid="compile.classpath"/>
+        </javac>
+        <copy todir="${classes}">
+            <fileset dir="${java.src}" excludes="**/*.java, ${binary.extensions}"/>
+            <filterset refid="project.vars"/>
+            <filterset>
+                <filter token="TIMESTAMP" value="${TODAY}"/>
+            </filterset>
+        </copy>
+        <copy todir="${classes}">
+            <fileset dir="${java.src}" includes="${binary.extensions}"/>
+        </copy>
+        <copy todir="${classes}" file="${license.file}">
+            <filterset refid="project.vars"/>
+            <filterset>
+                <filter token="TIMESTAMP" value="${TODAY}"/>
+            </filterset>
+        </copy>
+    </target>
+
+    <target name="compile.tests" depends="compile">
+        <mkdir dir="${test.classes}"/>
+        <javac srcdir="${test.src}" destdir="${test.classes}">
+            <classpath refid="test.classpath"/>
+        </javac>
+    </target>
+
+    <target name="test" depends="compile, compile.tests" description="Runs all project unit tests">
+        <mkdir dir="${test.results}"/>
+        <junit fork="yes" printsummary="on" haltonfailure="true" haltonerror="true">
+            <classpath refid="test.classpath"/>
+
+            <batchtest fork="yes" todir="${test.results}">
+                <fileset dir="${test.classes}">
+                    <include name="**/*Test.class"/>
+                </fileset>
+                <formatter type="plain"/>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="javadoc" depends="compile" if="include.javadocs" description="Creates javadocs for the project source files">
+        <mkdir dir="${javadocs}"/>
+        <javadoc sourcepath="${java.src}" destdir="${javadocs}" author="true"
+            version="true" use="true" failonerror="false"
+            windowtitle="${project.title} ${project.version} API"
+            doctitle="${project.title} ${project.version}">
+            <packageset dir="${java.src}"/>
+            <classpath refid="compile.classpath"/>
+        </javadoc>
+    </target>
+
+    <target name="jar" depends="javadoc" if="include.jar" description="Creates a jar file of the project source">
+        <mkdir dir="${build}/${dist}"/>
+        <jar basedir="${classes}" compress="true" destfile="${build}/${dist}/${distfile.name}.jar">
+            <manifest>
+                <attribute name="Main-Class" value="net.sourceforge.barbecue.Main" />
+                <attribute name="Build-Timestamp" value="${BUILD.TIMESTAMP}" />
+                <attribute name="Implementation-Title" value="${project.title}" />
+                <attribute name="Implementation-Version" value="${project.version}" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="war" depends="compile" if="include.war" description="Creates a deployable war file of the project">
+        <mkdir dir="${build}/${dist}"/>
+        <mkdir dir="${build}/war"/>
+        <copy todir="${build}" file="${web.xml.location}">
+            <filterset refid="project.vars"/>
+            <filterset>
+                <filter token="TIMESTAMP" value="${TODAY}"/>
+            </filterset>
+        </copy>
+        <war compress="true" destfile="${build}/${dist}/${project.name}.war" webxml="${build}/${web.xml}">
+            <lib dir="${runtime.lib}"/>
+            <classes dir="${classes}"/>
+        </war>
+    </target>
+
+    <target name="bin.dist.build" depends="jar, war">
+        <!--
+            Binary distribution structure:
+
+                + project.name-project.version
+                  - project.name-project.version.jar
+                  - project.name-project.version.war
+                  - zip content (verbatim inc. folders)
+                  + docs
+                      + apidocs
+                    + other?
+                    - web.src contents (verbatim inc. folders)
+        -->
+        <property name="bin.dist.target" value="${bin.dist}/${distfile.name}"/>
+        <property name="bin.dist.target.docs" value="${bin.dist.target}/${docs}"/>
+        <property name="bin.dist.target.lib" value="${bin.dist.target}/${lib}"/>
+        <mkdir dir="${dist}"/>
+        <mkdir dir="${bin.dist.target}"/>
+        <mkdir dir="${bin.dist.target.docs}"/>
+
+        <copy todir="${bin.dist.target}">
+            <fileset dir="${zip.src}"/>
+            <filterset refid="project.vars"/>
+            <filterset>
+                <filter token="TIMESTAMP" value="${TODAY}"/>
+            </filterset>
+        </copy>
+
+        <copy todir="${bin.dist.target}">
+            <fileset dir="${build}/${dist}">
+                <include name="${distfile.name}.jar"/>
+                <include name="${project.name}.war"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${bin.dist.target}">
+            <fileset dir="." includes="${license.file}"/>
+            <filterset refid="project.vars"/>
+            <filterset>
+                <filter token="TIMESTAMP" value="${TODAY}"/>
+            </filterset>
+        </copy>
+
+        <mkdir dir="${bin.dist.target.lib}"/>
+        <copy todir="${bin.dist.target.lib}">
+            <fileset dir="${runtime.lib}"/>
+        </copy>
+
+        <mkdir dir="${bin.dist.target.docs}/apidocs"/>
+        <copy todir="${bin.dist.target.docs}/apidocs">
+            <fileset dir="${javadocs}"/>
+            <filterset refid="project.vars"/>
+            <filterset>
+                <filter token="TIMESTAMP" value="${TODAY}"/>
+            </filterset>
+        </copy>
+
+        <copy todir="${bin.dist.target.docs}">
+            <fileset dir="${web.src}" excludes="${binary.extensions}"/>
+            <filterset refid="project.vars"/>
+            <filterset>
+                <filter token="TIMESTAMP" value="${TODAY}"/>
+            </filterset>
+        </copy>
+        <copy todir="${bin.dist.target.docs}">
+            <fileset dir="${web.src}" includes="${binary.extensions}"/>
+        </copy>
+    </target>
+
+    <target name="bin.dist.zip" depends="bin.dist.build" if="include.zips">
+        <zip destfile="${dist}/${distfile.name}.zip" compress="true" basedir="${bin.dist}"/>
+    </target>
+
+    <target name="bin.dist.tar" depends="bin.dist.build" if="include.tars">
+        <tar destfile="${dist}/${distfile.name}.tar" basedir="${bin.dist}"/>
+        <gzip src="${dist}/${distfile.name}.tar" zipfile="${dist}/${distfile.name}.tar.gz"/>
+        <delete file="${dist}/${distfile.name}.tar"/>
+    </target>
+
+    <target name="bin.dist" depends="bin.dist.zip, bin.dist.tar" if="include.binary.distribution" description="Creates binary distributions for the project"/>
+
+    <target name="src.dist.build">
+        <!--
+            Source distribution structure:
+
+                + project.name-project.version
+                  + src (verbatim inc. folders)
+                  - contents of root
+        -->
+        <property name="src.dist.target" value="${src.dist}/${distfile.name}"/>
+        <mkdir dir="${dist}"/>
+
+        <mkdir dir="${src.dist.target}"/>
+        <copy todir="${src.dist.target}">
+            <fileset dir="." includes="*" excludes="${license.file}"/>
+        </copy>
+
+        <copy todir="${src.dist.target}">
+            <fileset dir="." includes="${license.file}"/>
+            <filterset refid="project.vars"/>
+            <filterset>
+                <filter token="TIMESTAMP" value="${TODAY}"/>
+            </filterset>
+        </copy>
+
+        <mkdir dir="${src.dist.target}/${src}"/>
+        <copy todir="${src.dist.target}/${src}" includeemptydirs="false">
+            <fileset dir="${src}"/>
+        </copy>
+
+        <mkdir dir="${src.dist.target}/${compile.lib}"/>
+        <copy todir="${src.dist.target}/${compile.lib}" includeemptydirs="false">
+            <fileset dir="${compile.lib}"/>
+        </copy>
+
+        <mkdir dir="${src.dist.target}/${runtime.lib}"/>
+        <copy todir="${src.dist.target}/${runtime.lib}" includeemptydirs="false">
+            <fileset dir="${runtime.lib}"/>
+        </copy>
+
+        <mkdir dir="${src.dist.target}/${tools}"/>
+        <copy todir="${src.dist.target}/${tools}" includeemptydirs="false">
+            <fileset dir="${tools}"/>
+        </copy>
+    </target>
+
+    <target name="src.dist.zip" depends="src.dist.build" if="include.zips">
+        <zip destfile="${dist}/${src.distfile.name}.zip" compress="true" basedir="${src.dist}"/>
+    </target>
+
+    <target name="src.dist.tar" depends="src.dist.build" if="include.tars">
+        <tar destfile="${dist}/${src.distfile.name}.tar" basedir="${src.dist}"/>
+        <gzip src="${dist}/${src.distfile.name}.tar" zipfile="${dist}/${src.distfile.name}.tar.gz"/>
+        <delete file="${dist}/${src.distfile.name}.tar"/>
+    </target>
+
+    <target name="src.dist" depends="src.dist.zip, src.dist.tar" if="include.source.distribution" description="Creates source distributions for the project"/>
+
+    <target name="dist" depends="bin.dist, src.dist" if="include.distributions" description="Creates a set of distributable files for the project"/>
+
+    <target name="all" depends="clean, dist" description="Creates a set of project distributable files from scratch (full clean build)"/>
+
+
+    <target name="deploy.dist" depends="dist" description="Deploys project distributions" if="deploy.dists">
+        <echo message="FTPing distributions to ${ftp.server}/${ftp.dir}..."/>
+        <ftp server="${ftp.server}" userid="${ftp.user}" password="${ftp.password}" remotedir="${ftp.dir}" binary="yes">
+            <fileset dir="${dist}" includes="**/*.zip, **/*.tar, **/*.tar.gz"/>
+        </ftp>
+    </target>
+
+    <target name="deploy" depends="deploy.dist" description="Deploys all remote project artifacts"/>
+	
+</project>

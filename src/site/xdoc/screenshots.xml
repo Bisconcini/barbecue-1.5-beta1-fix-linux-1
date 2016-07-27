@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- $Header: /cvsroot/barbecue/barbecue/src/site/xdoc/screenshots.xml,v 1.6 2006/10/09 08:27:03 sullis Exp $ -->
+<document>
+  <properties>
+     <title>Screenshots</title>
+  </properties>
+  <body>
+  
+  <section name="Screenshots">
+  		<subsection name="BarcodeTool">
+  		<img align="center" src="images/screenshot-barcodetool.png" />
+  		</subsection>
+  		<subsection name="UCC 128">
+  		<img align="center" src="images/example-ucc128.png" />
+  		</subsection>
+  		<subsection name="Isabella the cat">
+  		<img align="center" src="images/isabella.png" />
+  		<img align="center" src="images/isabella-barcode.png" />
+  		</subsection>
+  </section>
+
+  </body>
+</document>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!-- $Header: /cvsroot/barbecue/barbecue/src/site/xdoc/related.xml,v 1.7 2006/09/25 04:51:20 sullis Exp $ -->
+<document>
+  <properties>
+     <title>Related information</title>
+  </properties>
+  <body>
+  <section name="Related information">
+
+    <subsection name="Barcodes">
+	    <ul>
+	    	<li><a href="http://wiki.java.net/bin/view/Javapedia/Barcode">http://wiki.java.net/bin/view/Javapedia/Barcode</a></li>
+	    	<li><a href="http://en.wikipedia.org/wiki/Barcode">http://en.wikipedia.org/wiki/Barcode</a></li>
+	    	<li><a href="http://www.gs1.org/productssolutions/barcodes/technical/bar_code_types.html">GS1 barcodes</a></li>
+	    	<li><a href="http://www.openbarcode.org/">www.openbarcode.org</a></li>
+
+	    </ul>
+    </subsection>
+
+    <subsection name="Other Java libraries">
+	    <ul>
+	    	<li><a href="http://barcode4j.krysalis.org/">Barcode4j</a></li>
+	    	<li><a href="http://freshmeat.net/projects/jbarcodebean/">JBarcodeBean</a></li>
+	    	<li><a href="http://jbars.sourceforge.net/">JBars</a></li>
+	    	<li><a href="http://itextdocs.lowagie.com/docs/com/lowagie/text/pdf/Barcode.html">iText Barcode class</a></li>
+	    	<li><a href="http://itextdocs.lowagie.com/examples/com/lowagie/examples/objects/images/tiff/Barcodes.java">iText barcode example</a></li>
+	    </ul>
+    </subsection>
+
+   </section>
+
+  </body>
+
+</document>
