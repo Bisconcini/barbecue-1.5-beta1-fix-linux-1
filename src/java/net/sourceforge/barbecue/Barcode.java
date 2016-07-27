@@ -427,7 +427,9 @@ public abstract class Barcode extends JComponent
     }
 
     private Dimension calculateSize() {
-        Dimension d = new Dimension();
+    	// CODIGO ORIGINAL AQUI
+    	///////////////////////////////////////////
+      /*  Dimension d = new Dimension();
         if (EnvironmentFactory.getEnvironment() instanceof HeadlessEnvironment) {
             try {
                 d = draw(new SizingOutput(font, getForeground(), getBackground()), 0, 0, barWidth, barHeight);
@@ -444,6 +446,35 @@ public abstract class Barcode extends JComponent
             }
         }
 
+        return d;*/
+    	
+    	Dimension d = new Dimension();
+        if(EnvironmentFactory.getEnvironment() instanceof HeadlessEnvironment)
+            try
+            {
+                
+                if(font == null)
+                {
+                    d = draw(new SizingOutput(font, getForeground(), getBackground()), 0, 0, barWidth, barHeight);
+                } else
+                {
+                    java.awt.FontMetrics fontMetrics = getFontMetrics(font);
+                    d = draw(new SizingOutput(font, fontMetrics, getForeground(), getBackground()), 0, 0, barWidth, barHeight);
+                }
+            }
+            catch(OutputException e)
+            {
+                e.printStackTrace();
+            }
+        else
+            try
+            {
+                java.awt.FontMetrics fontMetrics = null;
+                if(font != null)
+                    fontMetrics = getFontMetrics(font);
+                d = draw(new SizingOutput(font, fontMetrics, getForeground(), getBackground()), 0, 0, barWidth, barHeight);
+            }
+            catch(OutputException e) { }
         return d;
     }
     
