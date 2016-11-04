@@ -26,12 +26,12 @@
 
 package net.sourceforge.barbecue.output;
 
-import net.sourceforge.barbecue.env.DefaultEnvironment;
+import net.sourceforge.barbecue.env.EnvironmentFactory;
 
+import java.awt.*;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.Writer;
-import java.awt.*;
 
 /**
  * EPS outputter to output barcodes as Encapsulated Postscript  files.
@@ -51,7 +51,7 @@ public class EPSOutput extends AbstractOutput {
      * @param writer The Writer to output the EPS text to
      */
     public EPSOutput(Writer writer) {
-        super(DefaultEnvironment.DEFAULT_FONT, true, 1.0, Color.black, Color.white);
+        super(EnvironmentFactory.getEnvironment().getDefaultFont(), true, 1.0, Color.black, Color.white);
         this.writer = new BufferedWriter(writer);
         epsBody = new StringBuffer();
         epsHeader = new StringBuffer();

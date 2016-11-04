@@ -36,7 +36,7 @@ import java.awt.*;
  */
 public final class DefaultEnvironment implements Environment {
     /** The default font for drawing the barcode data underneath the bars */
-	public static final Font DEFAULT_FONT = new Font("Arial", Font.PLAIN, 20);
+	//public static final Font DEFAULT_FONT =null;// new Font("Arial", Font.PLAIN, 20);
 
 	/**
 	 * Returns the environment determined resolution for
@@ -52,6 +52,7 @@ public final class DefaultEnvironment implements Environment {
      * @return The default font for the environment
      */
     public Font getDefaultFont() {
-        return DEFAULT_FONT;
+		return Font.getFont("Arial");
+       // return DEFAULT_FONT;
     }
 }
