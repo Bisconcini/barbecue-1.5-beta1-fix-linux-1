@@ -1,12 +1,12 @@
 
 package net.sourceforge.barbecue;
 
-import net.sourceforge.barbecue.env.DefaultEnvironment;
-import net.sourceforge.barbecue.output.SVGOutput;
+import net.sourceforge.barbecue.env.EnvironmentFactory;
 import net.sourceforge.barbecue.output.EPSOutput;
+import net.sourceforge.barbecue.output.SVGOutput;
 
-import java.io.OutputStream;
 import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 
 /**
@@ -175,7 +175,7 @@ public class Main
 		{
 			// We need an output stream to write the image to...
 			OutputStreamWriter osw = new OutputStreamWriter(fos);
-			SVGOutput svg_out = new SVGOutput(osw, DefaultEnvironment.DEFAULT_FONT, java.awt.Color.black, java.awt.Color.white, 1, "in");
+			SVGOutput svg_out = new SVGOutput(osw, EnvironmentFactory.getEnvironment().getDefaultFont(), java.awt.Color.black, java.awt.Color.white, 1, "in");
 
 			barcode.output(svg_out);
 		}
