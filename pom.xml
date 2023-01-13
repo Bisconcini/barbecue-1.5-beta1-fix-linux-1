@@ -14,7 +14,7 @@
   <groupId>net.sourceforge.barbecue</groupId>
   <artifactId>barbecue</artifactId>
   <packaging>jar</packaging>
-  <version>1.5-beta2</version>
+  <version>1.5-beta3</version>
   <description>barbecue</description>
   <organization>
     <name>barbecue.sourceforge.net</name>

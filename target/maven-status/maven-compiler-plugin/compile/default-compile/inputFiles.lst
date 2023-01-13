@@ -1,59 +1,59 @@
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\LabelLayoutFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\env\EnvironmentFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\Module.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\twod\pdf417\PDF417Data.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\GraphicsOutput.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\env\Environment.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\code128\ShiftModule.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\code39\Code39Barcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\formatter\FormattingException.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\twod\pdf417\PDF417Module.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\code128\Accumulator.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\Barcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\env\DefaultEnvironment.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\postnet\PostNetModule.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\twoOfFive\Std2of5Barcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\BarcodeException.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\env\HeadlessEnvironment.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\SeparatorModule.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\ean\EAN13ModuleFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\twod\pdf417\PDF417Barcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\BlankModule.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\EPSOutput.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\BarcodePortlet.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\MarginLabelLayout.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\Output.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\BarcodeFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\twoOfFive\Std2of5ModuleFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\formatter\BarcodeFormatter.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\LinearBarcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\CompositeModule.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\code128\CharBuffer.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\formatter\SVGFormatter.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\code128\Code128Barcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\ean\EAN13Barcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\twoOfFive\Int2of5ModuleFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\SizingOutput.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\twoOfFive\Int2of5Barcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\codabar\ModuleFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\codabar\CodabarBarcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\upc\UPCABarcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\postnet\PostNetBarcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\SVGOutput.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\Main.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\DefaultLabelLayout.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\postnet\ModuleFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\code128\ModuleFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\code128\CodeChangeModule.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\AbstractOutput.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\ean\UCCEAN128Barcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\Modulo10.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\env\NonAWTEnvironment.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\code39\ModuleFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\LabelLayout.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\OutputException.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\ean\BooklandBarcode.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\BarcodeImageHandler.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\linear\upc\ModuleFactory.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\BarcodeServlet.java
-C:\Users\Guilherme\Downloads\barbecue-1.5-beta1-src\barbecue-1.5-beta1\src\java\net\sourceforge\barbecue\output\CenteredLabelLayout.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\DefaultLabelLayout.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\BarcodeFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\code128\Code128Barcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\code39\ModuleFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\twoOfFive\Int2of5ModuleFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\postnet\ModuleFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\code128\ModuleFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\SVGOutput.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\env\NonAWTEnvironment.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\twoOfFive\Int2of5Barcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\env\DefaultEnvironment.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\codabar\ModuleFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\Modulo10.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\code128\CodeChangeModule.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\code128\CharBuffer.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\Module.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\Output.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\CompositeModule.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\upc\ModuleFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\code128\ShiftModule.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\BlankModule.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\ean\EAN13Barcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\codabar\CodabarBarcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\env\Environment.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\SizingOutput.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\twoOfFive\Std2of5Barcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\twod\pdf417\PDF417Data.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\CenteredLabelLayout.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\BarcodeImageHandler.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\ean\BooklandBarcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\code39\Code39Barcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\upc\UPCABarcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\SeparatorModule.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\BarcodeException.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\BarcodePortlet.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\postnet\PostNetModule.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\LabelLayoutFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\formatter\SVGFormatter.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\GraphicsOutput.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\code128\Accumulator.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\OutputException.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\AbstractOutput.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\formatter\BarcodeFormatter.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\Main.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\twod\pdf417\PDF417Barcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\EPSOutput.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\env\EnvironmentFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\BarcodeServlet.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\twoOfFive\Std2of5ModuleFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\MarginLabelLayout.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\output\LabelLayout.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\twod\pdf417\PDF417Module.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\formatter\FormattingException.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\env\HeadlessEnvironment.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\ean\EAN13ModuleFactory.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\postnet\PostNetBarcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\ean\UCCEAN128Barcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\Barcode.java
+C:\Program Files\IdeaProjects\barbecue-1.5-beta3\src\java\net\sourceforge\barbecue\linear\LinearBarcode.java

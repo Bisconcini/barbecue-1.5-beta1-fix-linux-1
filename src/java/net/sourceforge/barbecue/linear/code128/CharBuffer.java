@@ -26,10 +26,11 @@
 
 package net.sourceforge.barbecue.linear.code128;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
 
-public final class CharBuffer {
+public final class CharBuffer implements Serializable {
     private final int size;
     private List chars;
     

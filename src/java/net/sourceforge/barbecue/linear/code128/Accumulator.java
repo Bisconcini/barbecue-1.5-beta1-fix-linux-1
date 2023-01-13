@@ -26,7 +26,9 @@
 
 package net.sourceforge.barbecue.linear.code128;
 
-public final class Accumulator {
+import java.io.Serializable;
+
+public final class Accumulator implements Serializable {
     private int value;
     
     public Accumulator(int startingValue) {
