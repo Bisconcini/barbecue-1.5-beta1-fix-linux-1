@@ -29,6 +29,7 @@ package net.sourceforge.barbecue;
 import net.sourceforge.barbecue.output.Output;
 import net.sourceforge.barbecue.output.OutputException;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 /**
@@ -37,7 +38,7 @@ import java.util.Arrays;
  *
  * @author <a href="mailto:opensource@ianbourke.com">Ian Bourke</a>
  */
-public class Module {
+public class Module implements Serializable {
     /** The specification of bars that makes up this module, in a list of bar widths in on, off order) */
     protected final int[] bars;
     private String symbol;
